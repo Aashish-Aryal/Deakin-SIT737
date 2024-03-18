@@ -4,9 +4,9 @@ Step 1: Install nodejs
 `sudo apt install nodejs`
 
 Step 2: Install Express<br>
-Create a new directory named 'Week-2'
-Run the following command:
-`npm init`
+Create a new directory named 'Week-2'<br>
+Run the following command:<br>
+`npm init`<br>
 `npm install express`
 
 ### server.js
