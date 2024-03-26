@@ -99,7 +99,7 @@ app.get("/subtract", (req,res)=>{
   const multipy= (n1,n2) => {
   return n1*n2;
 }
-app.get("/multipy", (req,res)=>{
+app.get("/multiply", (req,res)=>{
   // Error handling
   try{
   const n1= parseFloat(req.query.n1);

@@ -1,1 +1,4 @@
 {"level":"info","message":"Parameters 16 and 8 received for division","service":"calculate-microservice"}
+{"level":"info","message":"Parameters 9 and 5 received for addition","service":"calculate-microservice"}
+{"level":"info","message":"Parameters 9 and 5 received for subtraction","service":"calculate-microservice"}
+{"level":"info","message":"Parameters 9 and 3 received for multiplication","service":"calculate-microservice"}
