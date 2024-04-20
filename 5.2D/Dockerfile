@@ -1,0 +1,19 @@
+FROM node:16
+
+# Set working directory inside the container
+WORKDIR /usr/src/app
+
+# Copy package.json file to the working directory
+COPY package.json ./
+
+# Install app dependencies
+RUN npm install
+
+# Bundle app source 
+COPY server.js ./
+
+# Expose the port the app runs on
+EXPOSE 3050
+
+# command to run the app
+CMD [ "node", "server.js" ]
