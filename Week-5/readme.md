@@ -33,7 +33,7 @@ Create a docker-compose.yml file. This file contains information about all the c
 Run the docker compose file using the command `docker compose up`.
 
 ## Step 11
-Log on to localhost using the external ports accessed by both the apps as mentioned in the **docker-compose.yml** file. It's 3043 and 3044 in this case.
+To see both containers are running and can be accessed, log on to localhost using the external ports accessed by both the apps as mentioned in the **docker-compose.yml** file. It's 3043 and 3044 in this case.
 
 ## Step 12
 Get the ip address of one docker container and ping that container from the next container so show that both containers can communicate with each other. <br>
