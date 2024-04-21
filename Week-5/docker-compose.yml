@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    image: aashisharyal/sit737week5
+    ports:
+      - '3043:3050'
+    environment:
+      - PORT=3043
+    container_name: my-app1
+    networks:
+      - my-net
+
+  app1:
+    build: .
+    image: aashisharyal/sit737week5
+    ports:
+      - '3044:3050'
+    environment:
+      - PORT=3044
+    container_name: my-app2
+    networks:
+      - my-net
+
+
+networks:
+  my-net:
+    driver: bridge
