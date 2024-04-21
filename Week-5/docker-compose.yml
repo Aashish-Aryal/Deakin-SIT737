@@ -10,6 +10,12 @@ services:
     container_name: my-app1
     networks:
       - my-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3050/add?n1=5&n2=10"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: always
 
   app1:
     build: .
@@ -21,6 +27,12 @@ services:
     container_name: my-app2
     networks:
       - my-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3050/multiply?n1=5&n2=10"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: always
 
 
 networks:

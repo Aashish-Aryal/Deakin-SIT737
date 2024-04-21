@@ -39,3 +39,18 @@ To see both containers are running and can be accessed, log on to localhost usin
 Get the ip address of one docker container and ping that container from the next container so show that both containers can communicate with each other. <br>
 `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container1_name>` to get the IP address of 1st container. <br>
 `docker exec -it <container2_name> /bin/bash` and `ping <container1_IPaddress>` to ping one container from the another container.
+
+## Now pushing the docker image to dockerhub
+
+## Step 13
+Login to dockerhub using the command `docker login` and enter the id and password of your dockerhub account.
+
+## Step 14
+Push the docker image to dockerhub using the command `docker push <username>/<image_name>:<tag>`
+
+## Health check
+
+## Step 15
+Add the health check part to both containers in the docker compose file. Stop the docker compose using `docker comose down` and now start the new docker compose with health check using `docker compose up`. We can see the regular health check being conducted at the mentioned interval in the terminal. <br><br>
+
+In this health check both the containers are being accessed using `curl` command. The healthcheck is conducted at every 30 seconds. The healthcheck waits for the maximum of 10 seconds before sending the next `curl` request if it does get any response in the 10 seconds, it sends another request. This is repeated for maximum of 3 times and if the healthcheck does not get any response for 3 times, the container is declared to be unhealthy and is restarted.
